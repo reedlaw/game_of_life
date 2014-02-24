@@ -33,6 +33,14 @@ describe Grid do
       grid.iterate
       grid.get_cell(10, 10).should be_false
     end
+
+    it 'gives birth to new cells with exactly three neighbors' do
+      grid = described_class.new([9, 10], [10, 10], [11, 10])
+      grid.iterate
+      grid.get_cell(10, 9).should be_true
+      grid.get_cell(10, 11).should be_true
+      grid.get_cell(9, 10).should be_false
+    end
   end
 
   context '#get_neighbor_count' do

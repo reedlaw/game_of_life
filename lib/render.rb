@@ -12,7 +12,7 @@ OpenGL.load_dll('libGL.so', '/usr/lib')
 GLU.load_dll('libGLU.so', '/usr/lib')
 GLUT.load_dll('libglut.so', '/usr/lib')
 
-GRID = Grid.new([9, 10], [10, 10], [11, 10])
+GRID = Grid.new([59, 61], [59, 60], [60, 60], [60, 59], [61, 60])
 
 def display
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
